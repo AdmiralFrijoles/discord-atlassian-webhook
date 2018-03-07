@@ -1,0 +1,179 @@
+﻿{
+  "Server": {
+    "Host": "0.0.0.0",
+    "Port": 9080
+  },
+  "Discord": {
+    "BotName": "Atlas",
+    "AvatarUrl":  null,
+    "Webhooks": [
+      {
+        "Name": "source-control",
+        "URL": ""
+      },
+      {
+        "Name": "issues",
+        "URL": ""
+      }
+    ]
+  },
+  "Bitbucket": {
+    "Events": [
+      {
+        "Category": "repo",
+        "Name": "push",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "repo",
+        "Name": "fork",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "repo",
+        "Name": "updated",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "repo",
+        "Name": "transfer",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "repo",
+        "Name": "commit_comment_created,",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "repo",
+        "Name": "commit_status_created",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "repo",
+        "Name": "commit_status_updated",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "created",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "updated",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "approved",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "unapproved",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "fulfilled",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "rejected",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "comment_created",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "comment_updated",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "pullrequest",
+        "Name": "comment_deleted",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "issue",
+        "Name": "created",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "issue",
+        "Name": "updated",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      },
+      {
+        "Category": "issue",
+        "Name": "comment_created",
+        "Enabled": true,
+        "Webhooks": [
+          "source-control"
+        ]
+      }
+    ]
+  },
+  "Jira": {
+
+  }
+}
