@@ -1,11 +1,12 @@
 language: csharp
 solution: DiscordAtlassianWebhook.sln
+before_deploy:
+ - zip -r "$TRAVIS_BUILD_DIR/build_$TRAVIS_TAG.zip" "$TRAVIS_BUILD_DIR/bin/Release"
 deploy:
   provider: releases
   api_key:
     secure: LNP/SG9cJy3BGZ8g/rvDrNp0Y2oiDhWh0eFF2ZH5eXPKydAHhhE0TNMPLbMxmvR2ayodgeKDPJSliZLk9syR8dxHjq7RGLLOBHW8XyXUMFJ0nnUhRLW3EqO2KlBLvQBMczxmOlaX59S8IGMDKuEmFYPaRkUxVXThZekc9sS2jN8ijhm5PnnBrsau2i62/Ormi/6bBuyvChXf1NPiDn5OkF7G/MDLUd4MMp4tT4U4LiCzUWdZWXUlVsFVC+hgxQr4kdd41feTj0JxnA+v7EAQOELs03ob63Jxo5DVmG/Saq4dP1R7JiGeNoiHS8ealbZSyCF1bHVBvDMDB/WDGYDZWnumasv7alEmmziLwgqzNGL/WZCNVfEVN2ZHK6uAZ5P3eoXZEmoVTPn2GY1O43zb8mheMuCTPCwrMKSjXkQMlbzEyiOz+7LgcGLMr8VlhOF25cg/Unkwru95YbwU8pcWJV+FjK35WuZs+04cUHiHJ8TIfC/0SBL+sEVYbHJuMdmNFmOQm8LhdXZc3oKxy/2G8P5FKI0yzpve+sgKM2tW4ZJ7A5hALsqYBB70eI/IBLiV36uk7pF0EuVedJSx4HdwEFA/in1t0i/NJMsUf22cDK+5g6+A61zZVGySCc0ge7sbaMFFcuHFkkAE6bTnd/llxd+xecgUewY9FxezcEV+Bi8=
-  file_glob: true
-  file: bin/Release/*
+  file: "$TRAVIS_BUILD_DIR/build_$TRAVIS_TAG.zip"
   skip_cleanup: true
   on:
     tags: true
