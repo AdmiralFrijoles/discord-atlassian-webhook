@@ -1,7 +1,8 @@
 language: csharp
 solution: DiscordAtlassianWebhook.sln
 before_deploy:
- - zip -r "$TRAVIS_BUILD_DIR/build_$TRAVIS_TAG.zip" "$TRAVIS_BUILD_DIR/DiscordAtlassianWebhook/bin/Release"
+ - cd "$TRAVIS_BUILD_DIR/DiscordAtlassianWebhook/bin/Release"
+ - zip -r "$TRAVIS_BUILD_DIR/build_$TRAVIS_TAG.zip" .
 deploy:
   provider: releases
   api_key:
